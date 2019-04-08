@@ -1,10 +1,17 @@
+def fizz_buzz(n):
+    if n % 3 == 0 & n % 5 == 0:
+        print ("Fizz & Buzz")
+    elif n % 3 == 0:
+        print("Fizz")
+    elif n % 5 == 0:
+        print ("Buzz")
+    else:
+        print("Opps")
+
+
 def show_star(n):
-    if n > 0:
         for x in range(1, n+1):
             print(x*"*")
-    else:
-        print("bạn nhập số không đúng")
-        input("hãy nhập lại số n")
 
 
 def show_number(n):
@@ -15,9 +22,26 @@ def show_number(n):
             print(x, "ODD")
 
 
+def check_speed(speed):
+    if speed <= 70:
+        print("Ok")
+    else:
+        point = (speed - 70)//5
+        print("The spped is ", speed, "point is", point)
+        if point > 12:
+            print('License suspended')
+
+
 if __name__ == '__main__':
-    n = int(input("hãy nhập số n:"))
-    print("---------Bài 1 --------")
+    n = int(input("input n:"))
+    while True:
+        if n >= 0:
+            break
+        print ('Number is invalid')
+        n = int(input("Input again n:"))
+    print("---------Bai 1 --------")
+    fizz_buzz(n)
+    print("---------Bai 2 --------")
     show_star(n)
-    print("---------Bài 2 --------")
+    print("---------Bai 3 --------")
     show_number(n)
