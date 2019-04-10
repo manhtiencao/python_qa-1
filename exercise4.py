@@ -12,5 +12,10 @@ OK = float(70)
 speed = float(input("Nhập vào tốc độ (km/h): "))
 if speed <= OK:
     print("Ok")
+
 else:
-    print("Points:", int((speed - 70) / 5))
+    points = int((speed - OK) / 5)
+    if points <= 12:
+        print("Points:", points)
+    else:
+        print("License suspended")
