@@ -1,5 +1,5 @@
 def show_number(n):
-    for x in range(0, n+1):
+    for x in range(0, n + 1):
         if x % 2 == 0:
             print(x, "Even")
         else:
@@ -7,5 +7,8 @@ def show_number(n):
 
 
 if __name__ == "__main__":
-    n = int(input("Input number:"))
-    show_number(n)
+    try:
+        n = int(input("Input number:"))
+        show_number(n)
+    except Exception as err:
+        print('error=%s', err)

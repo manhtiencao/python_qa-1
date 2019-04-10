@@ -13,5 +13,9 @@ def check_speed(speed):
 
 
 if __name__ == "__main__":
-    speed = int(input("Your speed is:"))
-    check_speed(speed)
+    try:
+        speed = int(input("Your speed is:"))
+        check_speed(speed)
+    except Exception as err:
+        print('error=%s', err)
+
