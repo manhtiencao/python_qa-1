@@ -10,13 +10,13 @@ while True:
                     if point >=12:
                         print("License suspended")
                     else:
-                        print("Your point:", point +1)
+                        print("Your point:", point)
                 else:
                     point = (n-70)//5 +1
                     if point >=12:
                         print("License suspended")
                     else:
-                        print("Your point:", point +1)
+                        print("Your point:", point)
             break
         print("Pls inter interger!\n")
     except Exception:
