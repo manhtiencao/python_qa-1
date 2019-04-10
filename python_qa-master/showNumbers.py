@@ -7,8 +7,11 @@ def show_number(n):
 
 
 if __name__ == "__main__":
-    try:
-        n = int(input("Input number:"))
-        show_number(n)
-    except Exception as err:
-        print('error=%s', err)
+    while True:
+        try:
+            n = int(input("Input number:"))
+            show_number(n)
+            break
+        except Exception as err:
+            print('error=%s', err)
+        continue

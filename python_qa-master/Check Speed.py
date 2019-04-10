@@ -13,9 +13,12 @@ def check_speed(speed):
 
 
 if __name__ == "__main__":
-    try:
-        speed = int(input("Your speed is:"))
-        check_speed(speed)
-    except Exception as err:
-        print('error=%s', err)
+    while True:
+        try:
+            speed = int(input("Your speed is:"))
+            break
+        except ValueError:
+            print('Error Param. Please try again!')
+            continue
+    check_speed(speed)
 
