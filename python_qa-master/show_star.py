@@ -6,6 +6,7 @@ while True:
                     print('*'*x)
             break
         print("Please Try Again")
+        print("-"*30)
 
     except Exception as err:
         print("Error:", err)
