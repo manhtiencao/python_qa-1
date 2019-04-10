@@ -8,6 +8,6 @@ while True:
         print("Please Try Again")
 
     except Exception as err:
-        print('error=%s', err)
+        print("Error:", err)
         continue
 
