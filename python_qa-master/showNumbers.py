@@ -10,8 +10,11 @@ if __name__ == "__main__":
     while True:
         try:
             n = int(input("Input number:"))
-            show_number(n)
-            break
+            if n > 0:
+                show_number(n)
+                break
+            print("Please Try Again")
+            print("-"*30)
         except Exception as err:
-            print('error=%s', err)
+            print("Error:", err)
         continue
