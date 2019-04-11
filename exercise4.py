@@ -14,8 +14,18 @@ if speed <= OK:
     print("Ok")
 
 else:
-    points = int((speed - OK) / 5)
-    if points <= 12:
-        print("Points:", points)
+    ipoints = int((speed - OK) / 5)
+    fpoints = float((speed - OK) / 5)
+    if ipoints >= fpoints:
+        points = ipoints
+        if points <= 12:
+            print("Points:", points)
+        else:
+            print("License suspended")
     else:
-        print("License suspended")
+        points = ipoints + 1
+        if points <= 12:
+            print("Points:", points)
+        else:
+            print("License suspended")
+
