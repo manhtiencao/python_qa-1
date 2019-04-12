@@ -1,18 +1,19 @@
-def fizz_buzz(n):
-    if (n % 3 == 0 and n % 5 != 0):
-        print('Fizz ')
-    elif (n % 5 == 0 and n % 3 != 0):
-        print('Buzz ')
-    elif (n % 5 == 0 and n % 3 == 0):
-        print('FizzBuzz ')
+import math
+def speed(n):
+    limit = 70
+    if n < 70:
+        print("OK")
     else:
-        print('Opps ')
+        point = math.ceil((n - limit) / 5)
+        if point >= 12:
+            print("License suspended")
+        else:
+            print("Points: ", point)
 
-
-so_tu_nhien = 0
-while (so_tu_nhien <= 0):
+toc_do = 0
+while (toc_do <= 0):
     try:
-        so_tu_nhien = int(input('Nhap vao 1 so tu nhien '))
+        toc_do = int(input('Nhap vao toc do  '))
     except ValueError:
         print("No.. input string is not a number. It's a string")
-fizz_buzz(so_tu_nhien)
+speed(toc_do)
